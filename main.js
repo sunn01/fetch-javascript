@@ -13,6 +13,7 @@ fetch('https://pokeapi.co/api/v2/pokemon/?limit=10')
         }
     });*/
 const list = document.querySelector('ul')
+const container = document.querySelector('.container');
 fetch('https://dummyjson.com/products')
     .then((response) => response.json())
     .then((dta) => {
@@ -22,8 +23,25 @@ fetch('https://dummyjson.com/products')
 
         for (let i = 0; i < allProducts.length; i++) {
             const product = allProducts[i];
-            list.innerHTML += '<li>' + product.id + '\n' + product.title + '<br>' + product.description + '</li> <br>'
+            console.log(product);
+            // list.innerHTML += '<li>' + product.id + '\n' + product.title + '<br>' + product.description + '</li> <br>'
+            container.innerHTML += createCard(product)
             
         }
     });
+
+function createCard(prod) {
+    const card = `
+    <div class="card">
+        <h3>${prod.title}</h3>
+        <div class="img-wrapper">
+            <img src="${prod.thumbnail}" alt="">
+        </div>
+        <div class="bottom">${prod.price}</div>
+    </div>
+    `;
+
+    return card;
+}
+
 
