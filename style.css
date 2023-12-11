@@ -1,4 +1,4 @@
-body {
+/* body {
     background-color: lightgray;
 }
 
@@ -14,7 +14,7 @@ body {
     position: relative;
     width: 300px;
     height: 350px;
-    /* border: 3px solid red; */
+    /* border: 3px solid red; 
     padding: 8px;
     -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
@@ -60,4 +60,19 @@ img {
 .bottom {
     background-color:lavender;
 }    
+} */
+
+.box {
+    width: 200px;
+    height: 100px;
+    background-color:aquamarine;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.animate {
+    width: 200px;
+    height: 80px;
 }
